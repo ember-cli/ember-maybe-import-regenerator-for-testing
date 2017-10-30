@@ -6,7 +6,7 @@ var mergeTrees = require('broccoli-merge-trees');
 var Funnel = require('broccoli-funnel');
 
 module.exports = {
-  name: 'ember-maybe-import-regenerator',
+  name: 'ember-maybe-import-regenerator-for-testing',
 
   included: function(app) {
     this._super.included.apply(this, arguments);
@@ -19,15 +19,17 @@ module.exports = {
     var babelInstance = this.addons.filter(function(addon) { return addon.name === 'ember-cli-babel'; })[0];
     var needsRegenerator = babelInstance.isPluginRequired('transform-regenerator');
 
-    var regeneratorAlreadyIncluded =
-      hostApp.__ember_maybe_import_regenerator_included ||
-      babelOptions.includePolyfill || emberCLIBabelOptions.includePolyfill;
+    var regeneratorAlreadyIncluded = hostApp.__ember_maybe_import_regenerator_included
+      || hostApp.__ember_maybe_import_regenerator_for_testing_included
+      || babelOptions.includePolyfill
+      || emberCLIBabelOptions.includePolyfill;
 
-    hostApp.__ember_maybe_import_regenerator_included = true;
+    hostApp.__ember_maybe_import_regenerator_for_testing_included = true;
 
     if (!regeneratorAlreadyIncluded && needsRegenerator) {
       hostApp.import('vendor/regenerator-runtime/runtime.js', {
-        prepend: true
+        prepend: true,
+        type: 'test',
       });
     }
   },
