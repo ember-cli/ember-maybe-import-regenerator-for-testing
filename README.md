@@ -1,22 +1,13 @@
-# ember-maybe-import-regenerator
-
-> Uncaught TypeError: regeneratorRuntime is not a function
-
-It is now.
+# ember-maybe-import-regenerator-for-testing
 
 This is an addon that'll import the
 [Regenerator](https://github.com/facebook/regenerator)
-Runtime in your Ember app, but only if you didn't already set
-`babel.includePolyfill` to true. This is useful for:
-
-1. Apps that want to use ES6 generator functions (including `async/await`) but don't want to
-   import the large ~30kb (gzipped) Babel polyfill. This package adds ~2kb (gzipped).
-2. Addons that depend on generator functions (or other addons
-   that depend on generator functions) but don't want to
-   force users to have to add `babel.includePolyfill: true` to
-   their config files (like ember-concurrency, ember-power-select), but
-   shouldn't double import regenerator-runtime if the user already
-   has `includePolyfill: true`
+Runtime for usage in your Ember apps tests, but only if you didn't already set
+`babel.includePolyfill` to true or have `ember-maybe-import-regenerator` (a
+sister package that ensures regenerator runtime is present in the main
+`vendor.js` for usage throughout the application). This is useful for apps that
+want to use `async` / `await` (or ES6 generator functions) but don't want to
+ship the regenerator runtime in production.
 
 ## Installation
 
