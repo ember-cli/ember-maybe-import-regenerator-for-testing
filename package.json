@@ -22,7 +22,6 @@
   },
   "dependencies": {
     "broccoli-funnel": "^1.0.1",
-    "broccoli-merge-trees": "^1.0.0",
     "ember-cli-babel": "^6.6.0",
     "regenerator-runtime": "^0.9.5"
   },
