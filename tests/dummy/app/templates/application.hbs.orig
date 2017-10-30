@@ -1,0 +1,8 @@
+<<<<<<< HEAD
+<h1>This should say 123: {{foo}}</h1>
+
+=======
+<h2 id="title">Welcome to Ember</h2>
+
+{{outlet}}
+>>>>>>> 6d80a64... message
