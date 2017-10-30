@@ -1,5 +1,7 @@
 # ember-maybe-import-regenerator-for-testing
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ember-cli/ember-maybe-import-regenerator-for-testing.svg)](https://greenkeeper.io/)
+
 This is an addon that'll import the
 [Regenerator](https://github.com/facebook/regenerator)
 Runtime for usage in your Ember apps tests, but only if you didn't already set
