@@ -1,6 +1,6 @@
 {
   "name": "ember-maybe-import-regenerator-for-testing",
-  "version": "0.1.6",
+  "version": "1.0.0",
   "description": "Include regenerator runtime in test-support.js for testing only usages.",
   "keywords": [
     "ember-addon"
