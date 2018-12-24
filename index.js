@@ -1,11 +1,10 @@
-/* eslint-env node */
 'use strict';
 
 var path = require('path');
 var Funnel = require('broccoli-funnel');
 
 module.exports = {
-  name: 'ember-maybe-import-regenerator-for-testing',
+  name: require('./package').name,
 
   included: function(app) {
     this._super.included.apply(this, arguments);
