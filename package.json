@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "broccoli-funnel": "^2.0.2",
-    "ember-cli-babel": "^7.7.3",
+    "ember-cli-babel": "^7.8.0",
     "regenerator-runtime": "^0.13.2"
   },
   "devDependencies": {
